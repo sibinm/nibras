@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "nibras"
+    }
+  },
+  "defaultProject": "nibras",
+  "cli": {
+    "analytics": false
+  }
 }
