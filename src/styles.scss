@@ -55,4 +55,7 @@ ul {
 
 mat-card {
   background-color: white;
+  -webkit-box-shadow: 0 0 6px #bfbfbf00;
+  -moz-box-shadow:    0 0 6px #bfbfbf00;
+  box-shadow:         0 0 6px #bfbfbf00;
 }

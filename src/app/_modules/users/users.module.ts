@@ -6,6 +6,8 @@ import { SharedModule } from '../shared/shared.module';
 import { MaterialModule } from '../../material/material.module';
 
 import { UsersComponent } from '../users/users/users.component';
+import { UserCardComponent } from './user-card/user-card.component';
+import { TableComponent } from './table/table.component';
 
 const routes: Routes = [
   { path: '', component: UsersComponent },
@@ -15,7 +17,9 @@ export const Routing = RouterModule.forChild(routes);
 
 @NgModule({
   declarations: [
-    UsersComponent
+    UsersComponent,
+    UserCardComponent,
+    TableComponent
   ],
   imports: [
     CommonModule,

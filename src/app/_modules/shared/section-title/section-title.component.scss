@@ -22,6 +22,33 @@
     color: $text-color;
 }
 
+.view-actions {
+    display: inline-block;
+    border-radius: 4px;
+    border: 1px solid $border-color;
+    position: absolute;
+    top: 4px;
+    right: 10px;
+    button {
+        padding: 0;
+        height: 20px;
+        line-height: 20px;
+        width: 30px;
+        min-width: 30px;
+        background: transparent;
+        border-radius: 0;
+        &:first-child {
+            border-right: 1px solid $border-color;
+        }
+        span {
+            font-size: 1.6rem;
+        }
+        &.active {
+            color: $primary-color;
+        }
+    }
+}
+
 mat-card {
     padding: 0px;
     padding-bottom: 7px;

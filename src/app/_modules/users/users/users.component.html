@@ -1,1 +1,9 @@
-<app-section-title></app-section-title>
+<app-section-title [details]="details" (viewModeChange)="updateViewMode($event)"></app-section-title>
+
+<!-- Table view -->
+<app-table *ngIf="viewMode == 'table'"></app-table>
+
+<!-- Grid view -->
+<div *ngIf="viewMode == 'grid'">
+    <app-user-card *ngFor="let user of users"></app-user-card>
+</div>

@@ -1,9 +1,15 @@
 <mat-card>
     <div class="section-title flex">
         <span class="material-icons icon">article</span>
-        <p class="label">Title</p>
+        <p class="label">{{details?.id}}</p>
     </div>
-    <div class="description">
-        lorem ipsum
+    
+    <div class="description">{{details?.description}}</div>
+
+    <!-- Show View mode action for Users Page -->
+    <div class="view-actions" *ngIf="details.id == 'Users'">
+        <button mat-button (click)="setView('table')" [ngClass]="{ 'active': viewMode == 'table'}"><span class="material-icons icon">view_list</span></button>
+        <button mat-button (click)="setView('grid')" [ngClass]="{ 'active': viewMode == 'grid'}"><span class="material-icons icon">view_module</span></button>
     </div>
+
 </mat-card>

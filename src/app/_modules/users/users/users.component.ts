@@ -7,9 +7,44 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsersComponent implements OnInit {
 
+  public details: Object = {
+    id: 'Users',
+    description: 'lorem ipsum'
+  }
+  public viewMode: string = 'table';
+  public users = [
+    {
+      name: "lorem",
+      desc: "ipsum"
+    },
+    {
+      name: "lorem",
+      desc: "ipsum"
+    },
+    {
+      name: "lorem",
+      desc: "ipsum"
+    },
+    {
+      name: "lorem",
+      desc: "ipsum"
+    },
+    {
+      name: "lorem",
+      desc: "ipsum"
+    },
+    {
+      name: "lorem",
+      desc: "ipsum"
+    }
+  ]
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { }
+
+  updateViewMode(event) {
+    this.viewMode = event;
   }
 
 }
