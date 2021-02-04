@@ -1,0 +1,26 @@
+@import 'src/variables.scss';
+
+.overview {
+    background-color: white;
+    height: 100px;
+    .wrapper {
+        height: 100%;
+        align-items: flex-end;
+        .icon {
+            color: $primary-color;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 3rem;
+        }
+        .title {
+            font-size: 2.4rem;
+            margin: 0;
+            margin-bottom: 5px;
+        }
+        .value {
+            color: $text-color;
+            font-size: 1.5rem;
+        }
+    }
+}

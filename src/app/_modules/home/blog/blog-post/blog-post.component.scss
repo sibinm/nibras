@@ -1,0 +1,18 @@
+@import 'src/variables.scss';
+
+.wrapper {
+    padding-right: 35px;
+    .blog-thumbnail {
+        width: 100px;
+        border-radius: 4px;
+    }
+    .blog-title {
+        margin: 10px 0;
+        font-size: 1.6rem;
+    }
+    .blog-desc {
+        color: $text-color;
+        font-size: 1.3rem;
+        line-height: 1.5rem;
+    }
+}

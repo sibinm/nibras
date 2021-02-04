@@ -1,0 +1,33 @@
+@import 'src/variables.scss';
+
+.section-title {
+    padding: 10px;
+    border-bottom: 1px solid $border-color;
+    color: $text-color;
+    .icon {
+        font-size: 1.7rem;
+    }
+    .label {
+        font-size: 1.3rem;
+        font-weight: 500;
+        margin-left: 10px;
+    }
+}
+
+.wrapper {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    padding: 17px 25px 30px 25px;
+
+    @media screen and (max-width: 991px) {
+        grid-template-columns: 1fr 1fr;
+    }
+    @media screen and (max-width: 600px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+mat-card {
+    padding: 0;
+}
