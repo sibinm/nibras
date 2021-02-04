@@ -1,10 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { MaterialModule } from '../../material/material.module';
+
+import { SectionTitleComponent } from '../shared/section-title/section-title.component';
+
 @NgModule({
-  declarations: [],
+  declarations: [
+    SectionTitleComponent
+  ],
   imports: [
-    CommonModule
+    CommonModule,
+    MaterialModule
+  ],
+  exports: [
+    SectionTitleComponent
   ]
 })
 
