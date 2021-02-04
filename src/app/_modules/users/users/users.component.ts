@@ -11,8 +11,20 @@ export class UsersComponent implements OnInit {
     id: 'Users',
     description: 'lorem ipsum'
   }
-  public viewMode: string = 'table';
+  public viewMode: string = 'grid';
   public users = [
+    {
+      name: "lorem",
+      desc: "ipsum"
+    },
+    {
+      name: "lorem",
+      desc: "ipsum"
+    },
+    {
+      name: "lorem",
+      desc: "ipsum"
+    },
     {
       name: "lorem",
       desc: "ipsum"

@@ -1,0 +1,47 @@
+@import 'src/variables.scss';
+
+.wrapper {
+    padding: 60px 15px 20px 15px;
+    margin-bottom: 65px;
+    text-align: center;
+    .avatar-wrapper {
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        top: -40px;
+        left: calc(50% - 42px);
+        .avatar {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 7px solid white;
+            background: white;
+            border-radius: 50%;
+        }
+        .message-icon {
+            font-size: 1.2rem;
+            line-height: 2.1rem;
+            position: absolute;
+            bottom: -6px;
+            right: -10px;
+            background: #47a1f6;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            color: white;
+            border-radius: 50%;
+            border: 2px solid white;
+        }
+    }
+    .name {
+        color: $primary-color;
+        font-weight: 500;
+        font-size: 1.5rem;
+        margin-bottom: 4px;
+    }
+    .desc {
+        color: $text-color;
+        font-size: 1.3rem;
+    }
+}
