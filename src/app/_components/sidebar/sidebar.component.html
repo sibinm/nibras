@@ -1,7 +1,8 @@
-<div class="sidebar">
+<div class="sidebar" [ngClass]="{ 'active': isMenuOpened}">
     <div class="menu-title">Menu</div>
     <ul class="navigation">
-        <li routerLinkActive="active" [routerLink]="['/home']">Home</li>
-        <li routerLinkActive="active" [routerLink]="['/users']">Users</li>
+        <li routerLinkActive="active" [routerLink]="['/home']" (click)="toggleMenu()">Home</li>
+        <li routerLinkActive="active" [routerLink]="['/users']" (click)="toggleMenu()">Users</li>
     </ul>
 </div>
+<span class="material-icons menu" (click)="toggleMenu()">{{ isMenuOpened ? 'close' : 'menu'}}</span>

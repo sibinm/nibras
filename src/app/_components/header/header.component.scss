@@ -1,13 +1,43 @@
+@import 'src/variables.scss';
+
 header {
     margin: 0;
     padding: 0 30px;
     height: 60px;
     background: white;
+    justify-content: space-between;
     -webkit-box-shadow: 0 0 6px #bfbfbf00;
     -moz-box-shadow:    0 0 6px #bfbfbf00;
     box-shadow:         0 0 6px #bfbfbf00;
     h2 {
         margin:0;
-    }   
+    } 
+    .logo {
+        width: 30px;
+    } 
+    .settings {
+        background-color: $primary-color;
+        color: white;
+        font-weight: bold;
+        font-size: 1.6rem;
+        margin-left: 10px;
+
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        line-height: 31px;
+        text-align: center;
+    }
+    .menu {
+        display: none;
+        position: absolute;
+        left: 15px;
+        top: 17px;
+    }
 }
-    
+
+@media screen and (max-width: 600px) {
+    header {
+        padding-left: 55px;
+    }
+}

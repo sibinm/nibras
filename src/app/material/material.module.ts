@@ -8,6 +8,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatIconModule } from '@angular/material/icon';
 import { MatRippleModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
+import { MatBadgeModule } from '@angular/material/badge';
 
 @NgModule({
   declarations: [],
@@ -19,7 +20,8 @@ import { MatSelectModule } from '@angular/material/select';
     MatPaginatorModule,
     MatIconModule,
     MatRippleModule,
-    MatSelectModule
+    MatSelectModule,
+    MatBadgeModule
   ],
   exports: [
     MatButtonModule,
@@ -28,7 +30,8 @@ import { MatSelectModule } from '@angular/material/select';
     MatPaginatorModule,
     MatIconModule,
     MatRippleModule,
-    MatSelectModule
+    MatSelectModule,
+    MatBadgeModule
   ],
 })
 
