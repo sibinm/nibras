@@ -4,9 +4,8 @@
         <p class="label">Recent Blogs</p>
     </div>
     <div class="wrapper grid">
-        <app-blog-post></app-blog-post>
-        <app-blog-post></app-blog-post>
-        <app-blog-post></app-blog-post>
-        <app-blog-post></app-blog-post>
+        <ng-container *ngFor="let blog of blogs | slice:0:4;">
+            <app-blog-post [blog]="blog"></app-blog-post>
+        </ng-container>
     </div>
 </mat-card>

@@ -4,9 +4,10 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { SharedModule } from '../shared/shared.module';
 import { MaterialModule } from '../../material/material.module';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 
 import { UsersComponent } from '../users/users/users.component';
-import { UserCardComponent } from './user-card/user-card.component';
+import { UserCardComponent } from './users/user-card/user-card.component';
 import { TableComponent } from './table/table.component';
 
 const routes: Routes = [
@@ -22,6 +23,7 @@ export const Routing = RouterModule.forChild(routes);
     TableComponent
   ],
   imports: [
+    NgxDatatableModule,
     CommonModule,
     MaterialModule,
     SharedModule,

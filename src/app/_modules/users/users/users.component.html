@@ -1,9 +1,13 @@
-<app-section-title [details]="details" (viewModeChange)="updateViewMode($event)"></app-section-title>
+<app-section-title [details]="details" (viewModeChange)="updateViewMode($event)" *ngIf="details"></app-section-title>
 
-<!-- Table view -->
-<app-table *ngIf="viewMode == 'table'"></app-table>
+<ng-container *ngIf="isDataLoaded">
+    <!-- Table view -->
+    <app-table *ngIf="viewMode == 'table'" [data]="data"></app-table>
 
-<!-- Grid view -->
-<div *ngIf="viewMode == 'grid'" class="grid grid-view">
-    <app-user-card *ngFor="let user of users"></app-user-card>
-</div>
+    <!-- Grid view -->
+    <div *ngIf="viewMode == 'grid'" class="grid grid-view">
+        <ng-container *ngFor="let user of data">
+            <app-user-card [userDetails]="user"></app-user-card>
+        </ng-container>
+    </div>
+</ng-container>

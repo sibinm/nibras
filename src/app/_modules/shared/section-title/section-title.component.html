@@ -1,13 +1,14 @@
 <mat-card>
     <div class="section-title flex">
         <span class="material-icons icon">article</span>
-        <p class="label">{{details?.id}}</p>
+        <p class="label">{{details['id']}}</p>
     </div>
     
-    <div class="description">{{details?.description}}</div>
+    <div class="description" *ngIf="details['id'] == 'Home'">{{details['description']}}</div>
+    <div class="description" *ngIf="details['id'] == 'Users'">Total users: {{details['count']}}</div>
 
     <!-- Show View mode action for Users Page -->
-    <div class="view-actions" *ngIf="details.id == 'Users'">
+    <div class="view-actions" *ngIf="details['id'] == 'Users'">
         <button mat-button (click)="setView('table')" [ngClass]="{ 'active': viewMode == 'table'}"><span class="material-icons icon">view_list</span></button>
         <button mat-button (click)="setView('grid')" [ngClass]="{ 'active': viewMode == 'grid'}"><span class="material-icons icon">view_module</span></button>
     </div>

@@ -1,0 +1,44 @@
+@import 'src/variables.scss';
+
+.wrapper {
+ padding: 0;
+ .actions {
+    padding: 10px 30px;
+    border-bottom: 1px solid $border-color;
+    justify-content: space-between;
+    span {
+        font-size: 1.2rem;
+    }
+    input {
+        padding: 3px 5px;
+        border: 1px solid #cecece;
+        border-radius: 3px;
+    }
+    .per-view select {
+        margin: 0 7px;
+    }
+    .search {
+        position: relative;
+        .search-icon {
+            position: absolute;
+            top: 6px;
+            left: 7px;
+        }
+        input {
+            padding-left: 22px;
+        }
+    }
+ }
+}
+
+// table styles
+.ngx-datatable {
+    box-shadow: none; 
+}
+
+::ng-deep .ngx-datatable.material .datatable-header {
+    height: 37px !important;
+}
+::ng-deep .datatable-header-cell-label {
+    color: $text-color;
+}

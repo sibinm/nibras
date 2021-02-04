@@ -1,1 +1,35 @@
-<p>table works!</p>
+<mat-card class="wrapper">
+
+    <div class="actions flex">
+        <!-- Page per view input -->
+        <div class="per-view flex">
+            <span>Show</span>
+            <select onChange="updateViewCount()">
+                <option value="10">10</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+              </select>
+            <span>Entries</span>
+        </div>
+
+        <!-- Search -->
+        <div class="search flex">
+            <span class="material-icons search-icon">search</span>
+            <input type="text" placeholder="Search Entry" (keyup)="updateFilter($event)" />
+        </div>
+    </div>
+
+    <ngx-datatable
+        class="material"
+        [rows]="rows"
+        [loadingIndicator]="loadingIndicator"
+        [columns]="columns"
+        [headerHeight]="50"
+        [footerHeight]="50"
+        rowHeight="auto"
+        [reorderable]="reorderable"
+        [limit]="pageSize"
+      >
+      </ngx-datatable>
+</mat-card>

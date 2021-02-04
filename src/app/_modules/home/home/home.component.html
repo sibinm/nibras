@@ -2,12 +2,11 @@
 
     <app-section-title [details]="details"></app-section-title>
 
-    <!-- Over view grids -->
+    <!-- Overview grids -->
     <div class="overview grid">
-        <app-overview-card></app-overview-card>
-        <app-overview-card></app-overview-card>
-        <app-overview-card></app-overview-card>
-        <app-overview-card></app-overview-card>
+        <ng-container *ngFor="let overview of overviews">
+            <app-overview-card [overview]="overview"></app-overview-card>
+        </ng-container>
     </div>
 
     <!-- Blog -->

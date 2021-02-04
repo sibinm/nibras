@@ -11,7 +11,7 @@ export class SectionTitleComponent implements OnInit {
   @Input() details: Object;
   @Output() viewModeChange = new EventEmitter<string>();
 
-  public viewMode: string = 'grid';
+  public viewMode: string = 'table';
 
   constructor() { }
 
